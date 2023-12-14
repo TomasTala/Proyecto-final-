@@ -1,0 +1,82 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.containercabezal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px;
+  background-color: #815103;
+  color: #181717;
+  height: 100%;
+}
+.containercabezal .logohead img {
+  height: auto;
+  max-height: 80px;
+}
+.containercabezal .mercader h1 {
+  margin: 0;
+}
+
+.navbar {
+  background-color: #815103;
+}
+.navbar .navbar-brand,
+.navbar .navbar-nav .nav-link {
+  color: #181717 !important;
+}
+.navbar .navbar-toggler-icon {
+  background-color: #181717;
+}
+
+/* MAIN */
+footer .footbox {
+  background-color: #815103;
+  color: #181717;
+  text-align: center;
+  padding: 10px;
+}
+
+/* PAGINA DE RECETAS */
+.grid-recetas {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px 10px;
+}
+.grid-recetas .grid-item {
+  border: 1px black solid;
+  text-align: center;
+  background-color: rgb(250, 140, 100);
+  border-radius: 15px;
+}
+.grid-recetas .grid-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px 15px 0px 0px;
+  display: block;
+}
+.grid-recetas .grid-item:hover {
+  background-color: chocolate;
+}
+
+@media only screen and (max-width: 767px) {
+  .containercabezal {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .containercabezal .logohead img {
+    margin-bottom: 10px;
+  }
+  .navbar {
+    padding: 10px;
+  }
+  .navbar-toggler-icon {
+    background-color: #181717;
+  }
+}/*# sourceMappingURL=main.css.map */

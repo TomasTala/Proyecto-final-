@@ -1,0 +1,110 @@
+// Variables
+$primary-color: #815103;
+$secondary-color: #181717;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+// Header
+.containercabezal {
+  @include flex-center;
+  flex-direction: row;
+  padding: 10px;
+  background-color: $primary-color;
+  color: $secondary-color;
+  height: 100%;
+
+  .logohead {
+    img {
+      height: auto;
+      max-height: 80px; //
+    }
+  }
+
+  .mercader {
+    h1 {
+      margin: 0;
+    }
+  }
+}
+
+// Nav
+.navbar {
+  background-color: $primary-color;
+
+  .navbar-brand,
+  .navbar-nav .nav-link {
+    color: $secondary-color !important;
+  }
+
+  .navbar-toggler-icon {
+    background-color: $secondary-color;
+  }
+}
+/* MAIN */
+
+// Footer
+footer {
+  .footbox {
+    background-color: $primary-color;
+    color: $secondary-color;
+    text-align: center;
+    padding: 10px;
+  }
+}
+/* PAGINA DE RECETAS */
+.grid-recetas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px 10px;
+  
+    .grid-item {
+      border: 1px black solid;
+      text-align: center;
+      background-color: rgb(250, 140, 100);
+      border-radius: 15px;
+  
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px 15px 0px 0px;
+        display: block;
+      }
+  
+      &:hover {
+        background-color: chocolate;
+      }
+    }
+  }
+// Media quary
+@media only screen and (max-width: 767px) {
+  .containercabezal {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .logohead img {
+      margin-bottom: 10px;
+    }
+  }
+
+  .navbar {
+    padding: 10px;
+  }
+
+  .navbar-toggler-icon {
+    background-color: $secondary-color;
+  }
+}
+
