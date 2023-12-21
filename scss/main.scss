@@ -8,6 +8,9 @@ $secondary-color: #181717;
   justify-content: center;
   align-items: center;
 }
+*{
+  font-family: montserrat;
+}
 
 body {
   font-family: 'Arial', sans-serif;
@@ -48,9 +51,6 @@ body {
     color: $secondary-color !important;
   }
 
-  .navbar-toggler-icon {
-    background-color: $secondary-color;
-  }
 }
 /* MAIN */
 
@@ -67,8 +67,9 @@ footer {
 .grid-recetas {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
     gap: 10px 10px;
+    padding-bottom: 20px;
   
     .grid-item {
       border: 1px black solid;
@@ -107,4 +108,113 @@ footer {
     background-color: $secondary-color;
   }
 }
+/* PAGINA DE RECETAS CATALOGO */
+.catalog {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px; 
+  padding: 20px; 
+}
+    
+.image-column {
+  img {
+      max-width: 80%; 
+      height: auto; 
+      display: block;
+      margin: 0 auto; 
+      border-radius: 20px;
+  }
+}
 
+.description-column {
+  h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+  }
+
+  p {
+      margin-bottom: 15px;
+  }
+
+  button {
+      padding: 10px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  }
+
+  button:hover {
+      background-color: #2980b9;
+  }
+}
+
+@media (max-width: 768px) {
+  .catalog {
+      grid-template-columns: 1fr;
+  }
+}
+/* FIN DE PAGINA DE RECETAS CATALOG */
+
+  A:link {text-decoration: none }
+  A:visited {color: rgb(255, 255, 255);  font-family: arial; text-decoration: none }
+  A:hover { color: rgb(253, 253, 253); font-family: arial; text-decoration: none }
+  /* PAGINA DE ESPECIAS */
+  .catalog-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .product {
+    box-sizing: border-box;
+    width: 300px;
+    margin: 20px;
+    padding: 15px;
+    border: 5px solid #d4770c;
+    border-radius: 20px;
+    text-align: center;
+  
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+  
+    h3 {
+      margin-top: 0;
+    }
+  
+    .price {
+      font-weight: bold;
+      color: #007BFF;
+    }
+  }
+  /* FIN DE PAGINA RECETAS */
+    .contactitle {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 2rem;
+    }
+
+    .gridct {
+      display: grid;
+      grid-template-columns: 1fr;
+
+      @media (min-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      .gridmail,
+      .gridofi {
+        padding: 20px;
+
+        h3 {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  
